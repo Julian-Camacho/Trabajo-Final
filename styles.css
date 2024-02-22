@@ -117,8 +117,22 @@ header, nav, nav ul, header div{
         top: 9px;
     }
 
+    .check-menu:checked~.burger-menu .burger-line {
+        background-color: transparent;
+    }
+
+    .check-menu:checked~.burger-menu .burger-line::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .check-menu:checked~.burger-menu .burger-line::after  {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
     .check-menu:checked~.header-container {
-        background-color: #ddd;
+        height: 100vh;
         .nav-links {
             display: flex;
         }
@@ -170,8 +184,6 @@ header, nav, nav ul, header div{
         }
     }
 
-    
-
     .user-link {
         display: none;
         margin-bottom: 50px;
@@ -190,11 +202,14 @@ header, nav, nav ul, header div{
     }
 
     .header-container {
-        height: 100vh; 
+        height: 50px; 
         width: 100%;
         display: flex;
+        overflow: hidden;
         position: fixed;
         top: 0;
+        background-color: #ddd;
+        transition: all .5s ease-in-out;
     }
 
 }
