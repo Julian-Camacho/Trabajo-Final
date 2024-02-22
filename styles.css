@@ -15,11 +15,10 @@ header, nav, nav ul, header div{
 .main-header {
     display: flex;
     justify-content: center;
-    background-color: #ddd;
     width: 100%;
     position: sticky;
     top: 0;
-
+    background-color: #ddd;
 }
 
 
@@ -28,10 +27,8 @@ header, nav, nav ul, header div{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
     max-width: 1440px;
-    width: 100%;
-    margin: 0px 10px;
 }
 
 .nav-bar {
@@ -77,13 +74,127 @@ header, nav, nav ul, header div{
 /* ?<--- FOOTER ---> */
 /* ?<--- FOOTER ---> */
 
-/* MEDIAS */
+/* MEDIAS QUERYS */
 
 @media screen and (width < 768px) {
-    .header-container {
-        flex-direction: column;
-        flex: 1;
-        z-index: 1;
-        height: 100%;
+
+    .burger-menu, .burger-line {
+        display: inline;
     }
+
+    .burger-menu {
+        width: 40px;
+        height: 40px;
+        background-color: #aaa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 5px;
+        left: 5px;
+        z-index: 1;
+    }
+
+    .burger-line {
+        background-color: #777;
+        height: 3px;
+        width: 25px;
+        position: relative;
+    } 
+
+    .burger-line::after,
+    .burger-line::before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #777;
+        position: absolute;
+        top: -9px;
+    }
+
+    .burger-line::after {
+        top: 9px;
+    }
+
+    .check-menu:checked~.header-container {
+        background-color: #ddd;
+        .nav-links {
+            display: flex;
+        }
+        .user-link {
+            display: flex;
+            justify-content: center;
+            min-width: 768px;
+        }
+    }
+
+    .header-container, .nav-bar, .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-header {
+        position: sticky;
+        top: 0;
+        height: 50px;
+        background-color: #ddd;
+    }
+
+    .nav-links {
+        padding: 0;   
+        margin: 0;
+        flex: 1;
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        li {
+            height: 100px;
+            width: 100%;
+            a {
+                flex: 1;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            border-bottom: solid 1px #777; 
+        }
+    }
+
+    
+
+    .user-link {
+        display: none;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .nav-logo {
+        position: absolute;
+        top: 5px;
+    }
+
+    .cart-link {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .header-container {
+        height: 100vh; 
+        width: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+    }
+
 }
