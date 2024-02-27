@@ -29,6 +29,7 @@ header, nav, nav ul, header div{
     align-items: center;
     flex: 1;
     max-width: 1440px;
+    padding: 0px 15px;
 }
 
 .nav-bar {
@@ -59,6 +60,14 @@ header, nav, nav ul, header div{
     display: none;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+ .nav-links a:hover {
+    color: white;
+}
+
 /* ?<--- HEADER ---> */
 
 /* ?<--- CONTAINER ---> */
@@ -72,12 +81,76 @@ header, nav, nav ul, header div{
 /* ?<--- CONTAINER ---> */
 
 /* ?<--- FOOTER ---> */
+.main-footer {
+    background-color: #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.foot-container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-link {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+    justify-content: center;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.insta {
+    color: #CD408F;
+}
+
+.twit {
+    color: #1C96E8;
+}
+
+.yutu {
+    color: red;
+}
+
+.face {
+    color: #0866FF;
+}
+
+.linki {
+    color: #0B63BD;
+}
+
+.foot-logo img {
+    height: 200px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.foot-info {
+    width: 200px;
+}
+
 /* ?<--- FOOTER ---> */
+
+
 
 /* MEDIAS QUERYS */
 
 @media screen and (width < 768px) {
-
+    
+    /* ?<--- HEADER ---> */
     .burger-menu, .burger-line {
         display: inline;
     }
@@ -93,6 +166,10 @@ header, nav, nav ul, header div{
         top: 5px;
         left: 5px;
         z-index: 1;
+    }
+
+    .burger-menu:hover {
+        cursor: pointer;
     }
 
     .burger-line {
@@ -179,6 +256,7 @@ header, nav, nav ul, header div{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                text-decoration: none;
             }
             border-bottom: solid 1px #777; 
         }
@@ -198,7 +276,7 @@ header, nav, nav ul, header div{
     .cart-link {
         position: absolute;
         top: 15px;
-        right: 15px;
+        right: 25px;
     }
 
     .header-container {
@@ -211,5 +289,23 @@ header, nav, nav ul, header div{
         background-color: #ddd;
         transition: all .5s ease-in-out;
     }
+    /* ?<--- HEADER ---> */
+
+    /* ?<--- FOOTER ---> */
+    .foot-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .social-link {
+        align-items: center;
+    }
+
+    .foot-info {
+        text-align: center;
+    }
+
+    /* ?<--- FOOTER ---> */
 
 }
