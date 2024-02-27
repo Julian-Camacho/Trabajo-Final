@@ -60,11 +60,11 @@ header, nav, nav ul, header div{
     display: none;
 }
 
-.nav-links a {
+.header-container a {
     text-decoration: none;
     color: black;
 }
- .nav-links a:hover {
+ .header-container a:hover {
     color: white;
 }
 
