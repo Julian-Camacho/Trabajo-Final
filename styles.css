@@ -7,6 +7,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 /* ?<--- HEADER ---> */
@@ -152,7 +153,7 @@ header, nav, nav ul, header div{
     width: 100%;
     justify-content: center;
     background-color: #eee;
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
 
 .prom-sec {
@@ -246,6 +247,11 @@ header, nav, nav ul, header div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    h2 {
+        width: 100%;
+        margin: 20px;
+        font-size: 30px;
+    }
 }
 /* ?<--- CONTAINER ---> */
 
@@ -255,6 +261,11 @@ header, nav, nav ul, header div{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.no-scroll {
+    position: absolute;
+    bottom: 0px;
 }
 
 .foot-container {
@@ -312,6 +323,52 @@ a {
 }
 
 /* ?<--- FOOTER ---> */
+
+
+/* REGISTRO */
+
+.registro {
+    width: 600px;
+    padding: 30px;
+    background-color: #777;
+    color: white;
+    border-radius: 4px;
+    margin: 30px;
+}
+
+.datos {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #31b8ff;
+    font-size: 18px;
+}
+
+.area-dat {
+    height: 200px;
+}
+
+.form-titu {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.boton-reg {
+    width: 100%;
+    height: 40px;
+    background-color: #31b8ff;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+/* REGISTRO */
 
 
 
@@ -469,7 +526,13 @@ a {
     /* ?<--- HEADER ---> */
 
     /* ?<--- FOOTER ---> */
+
+    .main-footer {
+        width: 100%;
+    }
+
     .foot-container {
+        width: 100%;
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -507,8 +570,13 @@ a {
     }
 
     
-.card-container {
-    justify-content: center;
-}
+    .card-container {
+        justify-content: center;
+    }
+
+    .registro {
+        width: 100%;
+        margin: 30px 0;
+    }
 
 }
