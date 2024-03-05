@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
 
 /* ?<--- HEADER ---> */
@@ -328,7 +329,7 @@ a {
 /* REGISTRO */
 
 .registro {
-    width: 600px;
+    width: 500px;
     padding: 30px;
     background-color: #777;
     color: white;
@@ -370,7 +371,57 @@ a {
 
 /* REGISTRO */
 
+/* PRODUCTOS */
 
+table {
+    color: white;
+    background-color: #999;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    max-width: 1440px;
+    margin: 30px 0;
+}
+
+thead {
+    background-color: #777;
+}
+
+th{
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px white;
+}
+
+.tab-img {
+    height: 70px;
+    border-radius: 50%;
+}
+
+.act-cel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fa-pen-to-square {
+    color: #0866FF;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.tab-claro {
+    background-color: #bbb;
+}
+
+/* PRODUCTOS */
 
 /* MEDIAS QUERYS */
 
@@ -577,6 +628,10 @@ a {
     .registro {
         width: 100%;
         margin: 30px 0;
+    }
+
+    table {
+        overflow: scroll;
     }
 
 }
