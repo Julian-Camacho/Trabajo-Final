@@ -411,6 +411,10 @@ td {
     justify-content: space-around;
 }
 
+.act-cel i:hover {
+    cursor: pointer;
+}
+
 .fa-pen-to-square {
     color: #0866FF;
 }
@@ -518,9 +522,19 @@ td {
     padding: 30px;
 }
 
+.prod-desc {
+    margin-bottom: 20px;
+}
+
 .prod-specs h3 {
     font-size: 24px;
     margin-bottom: 30px;
+}
+
+.butons-cont {
+    display: flex;
+    justify-content: end;
+    gap: 50px;
 }
 
 /* DESCRIPCIÓN */
@@ -531,6 +545,7 @@ td {
     max-width: 1440px;
     padding: 30px;
     font-size: 20px;
+    text-align: justify;
 }
 
 .info-proyecto {
